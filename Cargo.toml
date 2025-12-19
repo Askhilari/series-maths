@@ -1,0 +1,6 @@
+[package]
+name = "series-maths"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
