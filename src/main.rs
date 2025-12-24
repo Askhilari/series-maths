@@ -7,6 +7,8 @@ fn main() {
     println!("Sum of squares is: {}", final_sum);
     let root_fiv = fifth_root(final_sum);
     println!("The fifth root is of {} is {}", final_sum, root_fiv);
+    let s = String::from("nayra iralihk");
+    rev_str(&s);
 }
 
 
@@ -62,4 +64,16 @@ fn fifth_root(num: i32) -> i32 {
     }
 
     return root - 1;
+}
+
+fn rev_str(s: &str) -> &str {
+    let slen = s.len();
+    if slen == 1 {
+        let strr = &s;
+        println!("{strr}");
+        return &s;
+    }
+    let drp_str = &s[slen-1..slen];
+    print!("{drp_str}");
+    return rev_str(&s[0..slen-1]);
 }
