@@ -1,14 +1,16 @@
 fn main() {
-    let nth = 20;
-    fibonnaci(0,1,nth); // Your will get lucas numbers if you change first two values to 2 and 1.
-    tribonnaci(0, 0, 1, nth);
-    let numsum = 50;
-    let final_sum = sum_of_squares(numsum);
-    println!("Sum of squares is: {}", final_sum);
-    let root_fiv = fifth_root(final_sum);
-    println!("The fifth root is of {} is {}", final_sum, root_fiv);
-    let s = String::from("nayra iralihk");
-    rev_str(&s);
+    // let nth = 20;
+    // fibonnaci(0,1,nth); // Your will get lucas numbers if you change first two values to 2 and 1.
+    // tribonnaci(0, 0, 1, nth);
+    // let numsum = 50;
+    // let final_sum = sum_of_squares(numsum);
+    // println!("Sum of squares is: {}", final_sum);
+    // let root_fiv = fifth_root(final_sum);
+    // println!("The fifth root is of {} is {}", final_sum, root_fiv);
+    // let s = String::from("nayra iralihk");
+    // rev_str(&s); 
+
+    check_palin("malayalam");
 }
 
 
@@ -76,4 +78,13 @@ fn rev_str(s: &str) -> &str {
     let drp_str = &s[slen-1..slen];
     print!("{drp_str}");
     return rev_str(&s[0..slen-1]);
+}
+
+fn check_palin(input: &str) {
+    let reverse_str: String = input.chars().rev().collect();
+    if reverse_str == input{
+        println!("True {}", reverse_str);
+    } else {
+        println!("Not Palindrome");
+    }
 }
