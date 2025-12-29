@@ -11,6 +11,9 @@ fn main() {
     // rev_str(&s); 
 
     check_palin("malayalam");
+    multiples_five_three(1000);
+    let series = fibo(3000);
+    println!("{}", series);
 }
 
 
@@ -87,4 +90,17 @@ fn check_palin(input: &str) {
     } else {
         println!("Not Palindrome");
     }
+}
+
+
+fn multiples_five_three(num: i32) {
+    let mut i = 0;
+    let mut sum = 0;
+    while i < num {
+        if i % 3 == 0 || i % 5 == 0 {
+            sum = sum + i;
+        }
+        i += 1;
+    }
+    println!("Final Sum is: {}", sum);
 }
